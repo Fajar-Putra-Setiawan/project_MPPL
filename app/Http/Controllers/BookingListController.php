@@ -51,7 +51,7 @@ class BookingListController extends Controller
         $booking = BookingList::findOrFail($id);
 
         //render view with post
-        return view('dashboard.content.bookinglist.edit', compact('projects'));
+        return view('dashboard.content.bookinglist.edit', compact('booking'));
     }
 
     /**

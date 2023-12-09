@@ -14,8 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/main', function () {
     return view('barberbarometer.index');
 })->name('index');
 Route::resource('/databarber', \App\Http\Controllers\DataBarberController::class);
 Route::resource('/bookinglist',\App\Http\Controllers\BookingListController::class);
+Route::resource('/booking',\App\Http\Controllers\BookingController::class);
+Route::resource('/barber',\App\Http\Controllers\BarberController::class);
+Route::resource('/detail',\App\Http\Controllers\DetailBarberController::class);
+
